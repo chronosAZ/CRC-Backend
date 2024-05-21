@@ -76,7 +76,7 @@ resource "aws_api_gateway_integration" "options_integration" {
   resource_id             = aws_api_gateway_resource.root.id
   http_method             = aws_api_gateway_method.options.http_method
   integration_http_method = "OPTIONS"
-  type                    = "MOCK"
+  type                    = "AWS"
   request_templates = {
     "application/json" = "{\"statusCode\": 200}"
   }
